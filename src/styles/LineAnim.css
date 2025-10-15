@@ -1,0 +1,17 @@
+.diagonal-line {
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: white;
+  transform: rotate(45deg);
+  animation: moveRight 2s linear infinite;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-100px) rotate(45deg);
+  }
+  100% {
+    transform: translateX(200px) rotate(45deg);
+  }
+}

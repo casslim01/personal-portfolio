@@ -1,0 +1,111 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="CL logo">
+  <defs>
+    <!-- Background noise for subtle texture (very light, keeps minimalist feel) -->
+    <filter id="grain" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence baseFrequency="0.9" numOctaves="2" seed="2" result="t"></feTurbulence>
+      <feColorMatrix type="saturate" values="0" in="t" result="g"></feColorMatrix>
+      <feComponentTransfer in="g" result="grain">
+        <feFuncA type="table" tableValues="0 0.04"></feFuncA>
+      </feComponentTransfer>
+      <feComposite in="grain" in2="SourceGraphic" operator="in" result="grainMask"></feComposite>
+      <feBlend in="SourceGraphic" in2="grainMask" mode="overlay"></feBlend>
+    </filter>
+
+    <!-- Metallic gradient -->
+    <linearGradient id="metalGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f5f7f8"></stop>
+      <stop offset="20%" stop-color="#dfe4e7"></stop>
+      <stop offset="45%" stop-color="#9fa6ac"></stop>
+      <stop offset="70%" stop-color="#c9cbd0"></stop>
+      <stop offset="100%" stop-color="#eef0f2"></stop>
+    </linearGradient>
+
+    <!-- Highlight/shimmer for a thin diagonal sheen -->
+    <linearGradient id="sheen" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.80)"></stop>
+      <stop offset="15%" stop-color="rgba(255,255,255,0.20)"></stop>
+      <stop offset="40%" stop-color="rgba(255,255,255,0)"></stop>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"></stop>
+    </linearGradient>
+
+    <!-- Soft drop shadow -->
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur"></feGaussianBlur>
+      <feOffset in="blur" dx="0" dy="12" result="offset"></feOffset>
+      <feColorMatrix in="offset" type="matrix" values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.45" result="shadow"></feColorMatrix>
+      <feBlend in="SourceGraphic" in2="shadow" mode="normal"></feBlend>
+    </filter>
+
+    <!-- Inner bevel to give the letters subtle depth -->
+    <filter id="innerBevel" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blurA"></feGaussianBlur>
+      <feOffset in="blurA" dx="0" dy="2" result="offsetA"></feOffset>
+      <feComposite in="SourceGraphic" in2="offsetA" operator="arithmetic" k1="0" k2="1" k3="-1" k4="0" result="inner"></feComposite>
+      <feComponentTransfer in="inner" result="inner2">
+        <feFuncA type="table" tableValues="0 0.5"></feFuncA>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="inner2" mode="overlay"></feBlend>
+    </filter>
+
+    <!-- A clipped sheen shape (diagonal) to overlay highlight -->
+    <clipPath id="textClip">
+      <text id="logoText" x="600" y="660" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="520">CL</text>
+    </clipPath>
+
+    <!-- Slight corner mask so the C has an open geometric cut -->
+    <mask id="cutMask">
+      <rect x="0" y="0" width="1200" height="1200" fill="white"></rect>
+      <!-- small rectangle cut on inner-right of C to create a negative-space join with L -->
+      <rect x="640" y="520" width="120" height="260" fill="black" rx="8"></rect>
+    </mask>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#070708"></rect>
+
+  <!-- Optional subtle vignette -->
+  <radialGradient id="vignette" cx="50%" cy="45%" r="80%">
+    <stop offset="60%" stop-color="rgba(0,0,0,0)"></stop>
+    <stop offset="100%" stop-color="rgba(0,0,0,0.45)"></stop>
+  </radialGradient>
+  <rect width="100%" height="100%" fill="url(#vignette)"></rect>
+
+  <!-- soft texture (very subtle) - comment out filter attribute if too noisy -->
+  <g filter="url(#grain)" opacity="0.03">
+    <rect width="100%" height="100%" fill="#000"></rect>
+  </g>
+
+  <!-- Main logo group -->
+  <g transform="translate(0, -18)">
+    <!-- text baseline reference (used for clipping) -->
+    <text id="logoTextRef" x="600" y="660" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="520" fill="url(#metalGrad)" filter="url(#softShadow)">
+      CL
+    </text>
+
+    <!-- Create a more geometric C and L by using stroked text behind and filled text front for crispness -->
+    <!-- Back stroked version (thick outline to create tech feel) -->
+    <text x="600" y="660" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="520" fill="none" stroke="#111217" stroke-width="34" stroke-linejoin="round" mask="url(#cutMask)" opacity="0.9"></text>
+    <!-- Front filled metal -->
+    <text x="600" y="660" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="520" fill="url(#metalGrad)" filter="url(#innerBevel)" mask="url(#cutMask)"></text>
+    <!-- Narrow L extension to create sleek, tech proportion -->
+    <!-- Add a subtle chrome reflection using clipped rectangle rotated for diagonal sheen -->
+    <g clip-path="url(#textClip)">
+      <rect x="260" y="160" width="680" height="420" transform="rotate(-18 600 360)" fill="url(#sheen)" opacity="0.45"></rect>
+    </g>
+
+    <!-- thin accent line under the L for a modern 'signature' touch -->
+    <rect x="690" y="800" width="220" height="18" rx="6" fill="#bfc4c8" opacity="0.85"></rect>
+
+    <!-- Very subtle outer glow (tech feel) -->
+    <g opacity="0.09" filter="url(#softShadow)">
+      <text x="600" y="660" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="520" fill="#ffffff">CL</text>
+    </g>
+  </g>
+
+  <!-- Accessibility: a tiny label off-canvas (screen readers) -->
+  <title>Monogram logo: C L — dark theme with silver metallic gradient</title>
+</svg>

@@ -1,0 +1,124 @@
+.grid-background {
+  background-size: 175px 175px;
+  animation: 
+    colorTransition 3s ease-in-out infinite alternate-reverse,
+    infiniteScroll 9s linear infinite;
+}
+
+
+@keyframes colorTransition {
+  0% { 
+    background-image: 
+      linear-gradient(#ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, rgba(255, 255, 255, 0.00) 10px, transparent 30px),
+      linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, rgba(255, 255, 255, 0.00) 10px, transparent 30px);
+  }
+  5% { 
+    background-image: 
+      linear-gradient(#ff3f40, #ff9f20, #bfff40, #40ff40, #4040ff, #6b20a2, rgba(255, 255, 255, 0.05) 10px, transparent 30px),
+      linear-gradient(90deg, #ff3f40, #ff9f20, #bfff40, #40ff40, #4040ff, #6b20a2, rgba(255, 255, 255, 0.05) 10px, transparent 30px);
+  }
+  10% { 
+    background-image: 
+      linear-gradient(#ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, rgba(255, 255, 255, 0.10) 10px, transparent 30px),
+      linear-gradient(90deg, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, rgba(255, 255, 255, 0.10) 10px, transparent 30px);
+  }
+  15% { 
+    background-image: 
+      linear-gradient(#dfbf20, #dfff20, #20ff20, #2020ff, #6b40a2, #b420f3, rgba(255, 255, 255, 0.15) 10px, transparent 30px),
+      linear-gradient(90deg, #dfbf20, #dfff20, #20ff20, #2020ff, #6b40a2, #b420f3, rgba(255, 255, 255, 0.15) 10px, transparent 30px);
+  }
+  20% { 
+    background-image: 
+      linear-gradient(#ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000, rgba(255, 255, 255, 0.20) 10px, transparent 30px),
+      linear-gradient(90deg, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000, rgba(255, 255, 255, 0.20) 10px, transparent 30px);
+  }
+  25% { 
+    background-image: 
+      linear-gradient(#bfff20, #20ff20, #2020ff, #6b40a2, #b420f3, #ff3f40, rgba(255, 255, 255, 0.25) 10px, transparent 30px),
+      linear-gradient(90deg, #bfff20, #20ff20, #2020ff, #6b40a2, #b420f3, #ff3f40, rgba(255, 255, 255, 0.25) 10px, transparent 30px);
+  }
+  30% { 
+    background-image: 
+      linear-gradient(#00ff00, #0000ff, #4b0082, #9400d3, #ff0000, #ff7f00, rgba(255, 255, 255, 0.30) 10px, transparent 30px),
+      linear-gradient(90deg, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000, #ff7f00, rgba(255, 255, 255, 0.30) 10px, transparent 30px);
+  }
+  35% { 
+    background-image: 
+      linear-gradient(#20ff20, #2020ff, #6b40a2, #b420f3, #ff3f40, #ff9f20, rgba(255, 255, 255, 0.35) 10px, transparent 30px),
+      linear-gradient(90deg, #20ff20, #2020ff, #6b40a2, #b420f3, #ff3f40, #ff9f20, rgba(255, 255, 255, 0.35) 10px, transparent 30px);
+  }
+  40% { 
+    background-image: 
+      linear-gradient(#0000ff, #4b0082, #9400d3, #ff0000, #ff7f00, #ffff00, rgba(255, 255, 255, 0.40) 10px, transparent 30px),
+      linear-gradient(90deg, #0000ff, #4b0082, #9400d3, #ff0000, #ff7f00, #ffff00, rgba(255, 255, 255, 0.40) 10px, transparent 30px);
+  }
+  45% { 
+    background-image: 
+      linear-gradient(#2020ff, #6b40a2, #b420f3, #ff3f40, #ff9f20, #bfff40, rgba(255, 255, 255, 0.45) 10px, transparent 30px),
+      linear-gradient(90deg, #2020ff, #6b40a2, #b420f3, #ff3f40, #ff9f20, #bfff40, rgba(255, 255, 255, 0.45) 10px, transparent 30px);
+  }
+  50% { 
+    background-image: 
+      linear-gradient(#4b0082, #9400d3, #ff0000, #ff7f00, #ffff00, #00ff00, rgba(255, 255, 255, 0.50) 10px, transparent 30px),
+      linear-gradient(90deg, #4b0082, #9400d3, #ff0000, #ff7f00, #ffff00, #00ff00, rgba(255, 255, 255, 0.50) 10px, transparent 30px);
+  }
+  55% { 
+    background-image: 
+      linear-gradient(#6b40a2, #b420f3, #ff3f40, #ff9f20, #bfff40, #40ff40, rgba(255, 255, 255, 0.55) 10px, transparent 30px),
+      linear-gradient(90deg, #6b40a2, #b420f3, #ff3f40, #ff9f20, #bfff40, #40ff40, rgba(255, 255, 255, 0.55) 10px, transparent 30px);
+  }
+  60% { 
+    background-image: 
+      linear-gradient(#9400d3, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, rgba(255, 255, 255, 0.60) 10px, transparent 30px),
+      linear-gradient(90deg, #9400d3, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, rgba(255, 255, 255, 0.60) 10px, transparent 30px);
+  }
+  65% { 
+    background-image: 
+      linear-gradient(#b420f3, #ff3f40, #ff9f20, #bfff40, #40ff40, #4040ff, rgba(255, 255, 255, 0.65) 10px, transparent 30px),
+      linear-gradient(90deg, #b420f3, #ff3f40, #ff9f20, #bfff40, #40ff40, #4040ff, rgba(255, 255, 255, 0.65) 10px, transparent 30px);
+  }
+  70% { 
+    background-image: 
+      linear-gradient(#ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, rgba(255, 255, 255, 0.70) 10px, transparent 30px),
+      linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, rgba(255, 255, 255, 0.70) 10px, transparent 30px);
+  }
+  75% { 
+    background-image: 
+      linear-gradient(#ff3f40, #ff9f20, #bfff40, #40ff40, #4040ff, #6b20a2, rgba(255, 255, 255, 0.75) 10px, transparent 30px),
+      linear-gradient(90deg, #ff3f40, #ff9f20, #bfff40, #40ff40, #4040ff, #6b20a2, rgba(255, 255, 255, 0.75) 10px, transparent 30px);
+  }
+  80% { 
+    background-image: 
+      linear-gradient(#ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, rgba(255, 255, 255, 0.80) 10px, transparent 30px),
+      linear-gradient(90deg, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, rgba(255, 255, 255, 0.80) 10px, transparent 30px);
+  }
+  85% { 
+    background-image: 
+      linear-gradient(#dfbf20, #dfff20, #20ff20, #2020ff, #6b40a2, #b420f3, rgba(255, 255, 255, 0.85) 10px, transparent 30px),
+      linear-gradient(90deg, #dfbf20, #dfff20, #20ff20, #2020ff, #6b40a2, #b420f3, rgba(255, 255, 255, 0.85) 10px, transparent 30px);
+  }
+  90% { 
+    background-image: 
+      linear-gradient(#ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000, rgba(255, 255, 255, 0.90) 10px, transparent 30px),
+      linear-gradient(90deg, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000, rgba(255, 255, 255, 0.90) 10px, transparent 30px);
+  }
+  95% { 
+    background-image: 
+      linear-gradient(#bfff20, #20ff20, #2020ff, #6b40a2, #b420f3, #ff3f40, rgba(255, 255, 255, 0.95) 10px, transparent 30px),
+      linear-gradient(90deg, #bfff20, #20ff20, #2020ff, #6b40a2, #b420f3, #ff3f40, rgba(255, 255, 255, 0.95) 10px, transparent 30px);
+  }
+  100% { 
+    background-image: 
+      linear-gradient(#ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, rgba(255, 255, 255, 1.00) 10px, transparent 30px),
+      linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, rgba(255, 255, 255, 1.00) 10px, transparent 30px);
+  }
+}
+
+@keyframes infiniteScroll {
+  0% { 
+    background-position: 0px 0px; 
+  }
+  100% { 
+    background-position: 175px 175px; 
+  }
+}

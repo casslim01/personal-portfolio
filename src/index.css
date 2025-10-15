@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Linebeam';
+  src: url('./assets/fonts/Linebeam.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
