@@ -7,6 +7,7 @@
   animation: moveRight 2s linear infinite;
 }
 
+
 @keyframes moveRight {
   0% {
     transform: translateX(-100px) rotate(45deg);

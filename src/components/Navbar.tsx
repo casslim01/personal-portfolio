@@ -12,12 +12,15 @@ function Navbar() {
             <a href="#projects" className="text-5xl rainbow-hover" style={{fontFamily: 'Linebeam, sans-serif'}}>
               Projects
             </a>
-            <a href="#contact" className="text-5xl rainbow-hover" style={{fontFamily: 'Linebeam, sans-serif'}}>
-              Contact
-            </a>
+
             <a href="#about" className="text-5xl rainbow-hover" style={{fontFamily: 'Linebeam, sans-serif'}}>
               Extras
             </a>
+            
+            <a href="#contact" className="text-5xl rainbow-hover" style={{fontFamily: 'Linebeam, sans-serif'}}>
+              Contact
+            </a>
+            
 
           </div>
           
