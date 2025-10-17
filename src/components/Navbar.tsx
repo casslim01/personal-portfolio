@@ -1,4 +1,4 @@
-import '../styles/navbar.css'
+import '../styles/rainbow.css'
 
 function Navbar() {
   return (

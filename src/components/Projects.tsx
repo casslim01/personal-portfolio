@@ -1,6 +1,7 @@
 import AVDIPage from "../assets/images/AVDIPage.png"
 import TeeBox from "../assets/images/TeeBoxPage.png"
 import ARPeriodicTable from "../assets/video/ARPeriodicTable.mp4"
+import "../styles/rainbow.css"
 
 
 function Projects() {
@@ -10,7 +11,9 @@ function Projects() {
         
         <div className="flex flex-col lg:flex-row gap-8 justify-center items-stretch">
           {/* Project 1 */}
-          <div className="flex-1 bg-black rounded-lg shadow-lg p-6 border-2 border-white">
+          <div 
+          onClick={() => window.open('https://avdi-website.pages.dev', '_blank')}
+          className="flex-1 bg-black rounded-lg shadow-lg p-6 border-2 border-white cursor-pointer hover:transform hover:scale-105 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 ease-in-out">
             <h3 className="text-2xl font-bold mb-4 text-white">Project One</h3>
             <img 
               src={AVDIPage} 
@@ -28,7 +31,9 @@ function Projects() {
           </div>
 
           {/* Project 2 */}
-          <div className="flex-1 bg-black rounded-lg shadow-lg p-6 border-2 border-white">
+          <div 
+          onClick={() => window.open('https://teeboxd-grp8.pages.dev', '_blank')}
+          className="flex-1 bg-black rounded-lg shadow-lg p-6 border-2 border-white cursor-pointer hover:transform hover:scale-105 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 ease-in-out">
             <h3 className="text-2xl font-bold mb-4 text-white">Project Two</h3>
             <img 
               src={TeeBox} 
@@ -48,7 +53,7 @@ function Projects() {
           </div>
 
           {/* Project 3 */}
-          <div className="flex-1 bg-black rounded-lg shadow-lg p-6 border-2 border-white">
+          <div className="flex-1 bg-black rounded-lg shadow-lg p-6 border-2 border-white hover:transform hover:scale-105 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 ease-in-out">
             <h3 className="text-2xl font-bold mb-4 text-white">Project Three</h3>
             <video 
               src={ARPeriodicTable}
