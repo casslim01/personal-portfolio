@@ -7,7 +7,7 @@ function Intro() {
 
   return (
       <div className="flex items-center justify-center min-h-screen p-32">
-        <div className="bg-black border-2 border-white p-8 rounded-lg">
+        <div className="bg-black border-4 border-white p-8 rounded-lg">
           <div className='mb-8'>
             <LineAnim />
           </div>
